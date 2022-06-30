@@ -1,0 +1,85 @@
+/*  ========== Font Start ==========  */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+/*  ========== Font End ==========  */
+
+
+/*  ========== Reset Start ==========  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Fira Sans", sans-serif;
+}
+/*  ========== Reset End ==========  */
+
+
+/*  ========== Body Style Start ==========  */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background: #2b2f77;
+    background: -webkit-linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+    background: linear-gradient(0deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+}
+/*  ========== Body Style End ==========  */
+
+
+/*  ========== Container Style Start ==========  */
+.container {
+    display: flex;
+    width: 100vh;
+}
+/*  ========== Container Style End ==========  */
+
+
+/*  ========== Panel Style Start ==========  */
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    -webkit-transition: all 800ms ease-in;
+}
+
+.panel h2 {
+    position: absolute;
+    font-size: 1.5rem;
+    bottom: 3rem;
+    left: 2.5rem;
+    margin: 0;
+    opacity: 0;
+    text-shadow: 2px 2px 5px rgb(22, 21, 21, 1);
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h2 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+/*  ========== Panel Style End ==========  */
+
+
+/*  ========== Media Start ==========  */
+@media (max-width: 480px){
+    .container {
+        width: 100vh;
+    }
+    
+    .panel:nth-of-type(4)
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+/*  ========== Media End ==========  */
